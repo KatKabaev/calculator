@@ -1,19 +1,13 @@
-# Калькулятор
 import tkinter as tk
-# Это значит обращаться к библ по имени tk
-# Создать графическое окно и заполнять его элементами графического интерфейса
 
-def get_values():  # возвращающая функция
+def get_values():  
     num1 = int(number_1_entry.get())
     num2 = int(number_2_entry.get())
     return num1, num2
 
-def insert_values(value):  # принимающая функция
-    answer_entry.delete(0, 'end')  # очищает до самого последнего символа
+def insert_values(value):  
+    answer_entry.delete(0, 'end') 
     answer_entry.insert(0, value)
-
-# если есть повторяющиеся участки кода, всегда стараемся их заменить, создать функцию
-# и вот месте, где она нужна, вызывать ее
 
 def add():
     num1, num2 = get_values()
